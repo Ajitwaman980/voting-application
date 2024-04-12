@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Application</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .voting-form {
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        input[type="text"],
+        select {
+            margin: 10px;
+            padding: 10px;
+            width: calc(100% - 20px);
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .voting-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .voting-option {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .voting-option:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        button[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+
+        #confirmation-message {
+            display: none;
+            color: #4caf50;
+            margin-top: 20px;
+        }
+
+        marquee {
+            color: red;
+            font-size: 1.4em;
+        }
+    </style>
+</head>
+
+<body>
+    <marquee> If you try a second time and it doesn't get accepted, just vote once </marquee>
+    <main class="content">
+        <section id="voting-options" class="voting-form">
+            <h2>Vote Now</h2>
+
+            <form id="voting-form" action="{% url 'vote' %}" method="post">
+                {% csrf_token %}
+                <input type="text" id="aadhar" name="aadhar" placeholder="Enter Your Voter Number" required />
+                <div class="voting-buttons">
+                    <select id="vote" name="vote" required>
+                        <option value="" disabled selected>Select Your Party</option>
+                        <option value="BJP">BJP</option>
+                        <option value="CONGRESS">Congress</option>
+                        <option value="AAP">AAP</option>
+                        <option value="SHIVSENA">Shivsena</option>
+                    </select>
+                </div>
+                <button type="submit">Vote NOW</button>
+            </form>
+
+            <p id="confirmation-message">Thank you for casting your vote!
+                <a href="{% url 'home' %}"><button>Return</button></a>
+            </p>
+        </section>
+
+    </main>
+
+
+</body>
+
+</html>

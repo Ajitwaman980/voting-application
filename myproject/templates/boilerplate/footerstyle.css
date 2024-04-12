@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0px;
+}
+
+.footer-distributed {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    color: white;
+    background-color: rgb(24, 24, 24);
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.footer-distributed h3 {
+    font: normal 1rem cursive;
+}
+
+.footer-distributed h3 span {
+    color: #5383d3;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    justify-content: space-evenly;
+    flex: 1;
+    padding: 1rem
+}
+
+.footer-left h3 {
+    color: white;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    cursor: -webkit-grab;
+    font-weight: 600;
+    padding: 0.2rem;
+}
+
+.footer-center div i {
+    padding: 0.1rem;
+    font-size: 1.2rem;
+}
+
+.footer-distributed .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-right {
+    width: 30%;
+}
+
+.footer-right p {
+    color: #8f9296;
+    width: 20rem;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-right h5 {
+    font-size: 0.8rem;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-top: -20px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 500px) {
+
+    .footer-distributed {
+        font: bold 14px sans-serif;
+
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+
+    .main {
+        line-height: normal;
+        font-size: auto;
+    }
+
+}

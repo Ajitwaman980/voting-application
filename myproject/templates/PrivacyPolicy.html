@@ -1,0 +1,93 @@
+{% include 'boilerplate/navbar.html' %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy - Voting Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .privacy-section {
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .privacy-section h2 {
+            color: #5383d3;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .privacy-section p {
+            line-height: 1.6;
+        }
+
+        .privacy-section a {
+            color: #5383d3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .privacy-section a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+        <section class="privacy-section">
+            <h2>Our Commitment to Your Privacy</h2>
+            <p>
+                Welcome to Voting Application, where your privacy and security are our top priorities. We understand the
+                importance of safeguarding your personal information and maintaining your trust.
+            </p>
+            <p>
+                Our Privacy Policy outlines how we collect, use, and protect your data when you use our voting platform.
+                Rest
+                assured, we adhere to the highest standards of privacy protection and comply with all relevant
+                regulations.
+            </p>
+            <p>
+                We may collect limited personal information, such as your name and email address, solely for the purpose
+                of
+                facilitating the voting process and ensuring the integrity of elections. Your data will never be shared
+                or sold
+                to third parties without your explicit consent.
+            </p>
+            <p>
+                By using our voting application, you acknowledge and agree to the terms outlined in this Privacy Policy.
+                We may
+                update this policy periodically, so please check back regularly for any changes.
+            </p>
+            <p>
+                If you have any questions or concerns about our Privacy Policy, please don't hesitate to <a
+                    href="mailto:privacy@votingapp.com">contact us</a>. Your privacy matters to us, and we're here to
+                address
+                any inquiries you may have.
+            </p>
+        </section>
+    </div>
+
+    {% include 'boilerplate/footer.html' %}
+</body>
+
+</html>
